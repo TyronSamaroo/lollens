@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 const tabs = [
   { id: "stats" as const, label: "STATS" },
   { id: "gold" as const, label: "GOLD" },
+  { id: "augments" as const, label: "AUGS" },
 ] as const;
 
 export function TabBar() {

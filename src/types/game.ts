@@ -18,6 +18,7 @@ export interface ActivePlayer {
 
 export interface ChampionStats {
   abilityPower: number;
+  abilityHaste: number;
   attackDamage: number;
   attackSpeed: number;
   armor: number;
@@ -26,7 +27,6 @@ export interface ChampionStats {
   currentHealth: number;
   moveSpeed: number;
   attackRange: number;
-  cooldownReduction: number;
   critChance: number;
   critDamage: number;
   lifeSteal: number;
@@ -40,6 +40,12 @@ export interface ChampionStats {
   resourceValue: number;
   resourceMax: number;
   resourceRegenRate: number;
+  healthRegenRate: number;
+  omnivamp: number;
+  physicalLethality: number;
+  magicLethality: number;
+  physicalVamp: number;
+  healShieldPower: number;
 }
 
 export interface Player {

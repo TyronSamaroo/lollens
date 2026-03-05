@@ -17,3 +17,13 @@ export function getChampionIconUrl(
 ): string {
   return `${DDRAGON_BASE}/${version}/img/champion/${championName}.png`;
 }
+
+// CommunityDragon (Arena augment data)
+export const CDRAGON_ARENA_URL =
+  "https://raw.communitydragon.org/latest/cdragon/arena/en_us.json";
+
+export function getCDragonAugmentIconUrl(iconPath: string): string {
+  // CDragon paths come as e.g. "ASSETS/Maps/Cherry/..." — need lowercase + .png
+  const cleaned = iconPath.toLowerCase().replace(/\.tex$/, ".png");
+  return `https://raw.communitydragon.org/latest/game/${cleaned}`;
+}
