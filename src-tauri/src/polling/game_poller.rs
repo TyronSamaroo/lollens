@@ -29,7 +29,8 @@ pub async fn start_polling(app_handle: AppHandle) {
                 }
                 let _ = app_handle.emit("game-data-update", &game_data);
             }
-            Err(_) => {
+            Err(e) => {
+                eprintln!("[LolLens] Poll error: {:?}", e);
                 if was_connected {
                     let _ = app_handle.emit(
                         "connection-state",

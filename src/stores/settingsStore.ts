@@ -3,11 +3,11 @@ import { persist, createJSONStorage } from "zustand/middleware";
 
 interface SettingsState {
   overlayOpacity: number;
-  activeTab: "stats" | "gold";
+  activeTab: "stats" | "gold" | "augments";
   isCollapsed: boolean;
 
   setOverlayOpacity: (opacity: number) => void;
-  setActiveTab: (tab: "stats" | "gold") => void;
+  setActiveTab: (tab: "stats" | "gold" | "augments") => void;
   toggleCollapsed: () => void;
 }
 

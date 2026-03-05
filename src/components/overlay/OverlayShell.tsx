@@ -5,6 +5,7 @@ import { ConnectionStatus } from "./ConnectionStatus";
 import { TabBar } from "./TabBar";
 import { StatsPanel } from "@/components/stats/StatsPanel";
 import { GoldPanel } from "@/components/gold/GoldPanel";
+import { AugmentsPanel } from "@/components/augments/AugmentsPanel";
 import { formatGameTime } from "@/lib/formatters";
 
 export function OverlayShell() {
@@ -57,18 +58,20 @@ export function OverlayShell() {
         {/* Content */}
         {!isCollapsed && (
           <div className="flex-1 flex flex-col overflow-hidden">
-            {connectionState !== "connected" ? (
-              <ConnectionStatus />
-            ) : (
-              <>
-                <div className="px-2 pt-2">
-                  <TabBar />
-                </div>
-                <div className="flex-1 overflow-y-auto px-2 pb-2 pt-1">
-                  {activeTab === "stats" ? <StatsPanel /> : <GoldPanel />}
-                </div>
-              </>
-            )}
+            <div className="px-2 pt-2">
+              <TabBar />
+            </div>
+            <div className="flex-1 overflow-y-auto px-2 pb-2 pt-1">
+              {activeTab === "augments" ? (
+                <AugmentsPanel />
+              ) : connectionState !== "connected" ? (
+                <ConnectionStatus />
+              ) : activeTab === "stats" ? (
+                <StatsPanel />
+              ) : (
+                <GoldPanel />
+              )}
+            </div>
           </div>
         )}
       </div>
