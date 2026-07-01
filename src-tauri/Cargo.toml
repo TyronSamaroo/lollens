@@ -1,8 +1,10 @@
 [package]
 name = "lollens"
-version = "0.1.0"
+version = "1.0.0"
 description = "League of Legends in-game overlay for Mac"
-authors = ["Tyron Samaroo"]
+authors = ["Tyron Samaroo <tyronsamaroo828@gmail.com>"]
+license = "MIT"
+repository = "https://github.com/TyronSamaroo/lollens"
 edition = "2021"
 
 [lib]
