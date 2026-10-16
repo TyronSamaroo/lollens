@@ -1,7 +1,14 @@
 {
   "name": "lollens",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "League of Legends in-game overlay for Mac — real-time stats, gold tracking & augment tier list",
+  "author": "Tyron Samaroo <tyronsamaroo828@gmail.com> (https://github.com/TyronSamaroo)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TyronSamaroo/lollens.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
